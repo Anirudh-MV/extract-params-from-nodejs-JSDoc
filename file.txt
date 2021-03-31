@@ -1,0 +1,9 @@
+// edit this file and paste your function here
+// nodejs function
+router.get("/user/:id", async function(req, res, next) {
+	let userid = req.params.id
+	let disabled = req.query.isDisabled
+	let bodyparam = req.body.userid
+	dosomething(userid, disabled)
+	res.json({status:200, message:"Works"})
+})
